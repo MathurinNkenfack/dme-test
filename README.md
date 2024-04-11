@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Clone the Repo
 ```shell
-git clone https://github.com/mathurinnkenfack/dme-test
+git clone https://github.com/MathurinNkenfack/dme-test.git
 cd dme-test
 ```
 
