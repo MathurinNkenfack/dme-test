@@ -1,0 +1,19 @@
+<div class="resume-card gap-3">
+    <div class="card-image" [class.no-image]="resumeCard.img === null">
+        @if(resumeCard.img !== null){
+            <img [src]="resumeCard.img" alt="{{resumeCard.title}}"/>
+        }
+            <span class="progress-bar" >
+                <span class="percentage" [style.width]="resumeCard.progress + '%'"></span>
+            </span>
+    </div>
+    <div class="card-footer">
+        <div class="title">
+            <span>{{resumeCard.title}}</span>
+            <span>{{"Episode " + resumeCard.episode}}</span>
+        </div>
+        <button class="btn-circle transparent">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+    </div>
+</div>

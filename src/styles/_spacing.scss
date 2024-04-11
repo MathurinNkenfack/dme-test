@@ -1,0 +1,31 @@
+@use './variables' as vars;
+@use 'sass:string';
+
+$sides: 'left', 'right', 'top', 'bottom';
+
+@for $i from 0 through 70 {
+    @each $side in $sides {
+        // margin left, right, bottom, top
+        .m-#{str-slice($side, 1, 1)}-#{$i} {
+            margin-#{$side}: $i * vars.$base-space;
+        }
+
+        .m-#{$i} {
+            margin: $i * vars.$base-space;
+        }
+
+        // padding left, right, bottom, top
+        .p-#{str-slice($side, 1, 1)}-#{$i} {
+            padding-#{$side}: $i * vars.$base-space;
+        }
+
+        .p-#{$i} {
+            padding: $i * vars.$base-space;
+        }
+
+        // gap
+        .gap-#{$i + 1} {
+            gap: ($i + 1) * vars.$base-space;
+        }
+    }
+}

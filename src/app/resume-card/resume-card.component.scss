@@ -1,0 +1,56 @@
+@use '../../styles/variables' as vars;
+
+.resume-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: vars.$base-space * 29;
+
+    .card-image {
+        width: vars.$base-space * 29;
+        height: vars.$base-space * 29;
+        border-radius: vars.$base-space * 2.5;
+        border: none;
+        background-color: vars.$gray-4;
+        position: relative;
+        overflow: hidden;
+
+        .progress-bar{
+            width: 90%;
+            display: block;
+            position: absolute;
+            left: 5%;
+            bottom: vars.$base-space*2;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .card-footer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        overflow: hidden;
+
+        .title {
+            display: flex;
+            width: 90%;
+            flex-direction: column;
+            font-weight: 500;
+            font-size: 0.75rem;
+            color: vars.$gray-3;
+            line-height: 1.8;
+            text-align: left;
+
+            span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+            }
+        }
+    }
+}

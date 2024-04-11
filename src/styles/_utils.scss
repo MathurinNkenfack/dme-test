@@ -1,0 +1,104 @@
+@use './variables' as vars;
+
+/* --------- General ------------ */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: vars.$font-family-general;
+    font-size: vars.$font-size;
+    background-color: vars.$black;
+    color: vars.$white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* --------- utils ------------ */
+.w-400px {
+    max-width: 400px;
+    min-width: 400px;
+    width: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.tab {
+    font-family: vars.$font-family-title;
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(255 255 255 / 50%);
+    padding: vars.$base-space;
+    border-radius: vars.$base-space;
+
+    &.red {
+        background-color: vars.$red;
+    }
+}
+
+.progress-bar {
+    width: 100%;
+    height: vars.$base-space;
+    border: none;
+    position: relative;
+    background-color: rgb(255 255 255 / 35%);
+    border-radius: 5px;
+
+    .percentage{
+        content: ' ';
+        position: absolute;
+        height: vars.$base-space;
+        border-radius: 5px;
+        background-color: white;
+    }
+}
+
+/* --------- Button------------ */
+.btn-circle {
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: vars.$base-space * 2;
+    background-color: vars.$gray-3;
+    color: white;
+    transition:
+        color,
+        background-color 500ms ease-in-out;
+
+    &.transparent {
+        padding: 0;
+
+        mat-icon {
+            transform: scale(0.67);
+        }
+
+        background-color: transparent;
+    }
+
+    &:hover,
+    &.transparent:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+
+/* --------- Text------------ */
+.txt-center {
+    text-align: center;
+}
+
+.txt-capitalize {
+    text-transform: capitalize;
+}

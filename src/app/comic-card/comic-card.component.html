@@ -1,0 +1,22 @@
+<div class="comic-card gap-4" [class.lg]="large">
+    <div class="card-image" [class.no-image]="comicCard.img === null">
+        @if(comicCard.img !== null){
+            <img [src]="comicCard.img" alt="{{comicCard.title}}"/>
+        }
+        @if(large){
+                <div class="card-footer gap-4 p-l-4 p-b-4 p-r-4">
+                    <span class="title">{{comicCard.title}}</span>
+                    @if(status !== null){
+                        <span class="tab red">{{status}}</span>
+                    }
+                </div>
+        }@else{
+            @if(status !== null){
+                <span class="tab red">{{status}}</span>
+            }
+        }
+    </div>
+    @if(!large){
+        <span class="title">{{comicCard.title}}</span>
+    }
+</div>
