@@ -38,31 +38,31 @@
         width: 100%;
     }
 
-    &.lg{
-        width: vars.$base-space*64;
+    &.lg {
+        width: vars.$base-space * 64;
 
-        .card-image{
-            width: vars.$base-space*64;
-            height: vars.$base-space*89;
+        .card-image {
+            width: vars.$base-space * 64;
+            height: vars.$base-space * 89;
             background: linear-gradient(180deg, #646464 0%, #323232 100%);
 
             img {
                 width: 100%;
             }
 
-            .card-footer{
+            .card-footer {
                 display: flex;
                 flex-direction: column;
                 position: absolute;
                 align-items: flex-start;
                 width: 100%;
                 bottom: 0;
-                
-                .tab{
+
+                .tab {
                     position: relative;
                 }
 
-                .title{
+                .title {
                     position: relative;
                     font-weight: 500;
                     text-transform: uppercase;
